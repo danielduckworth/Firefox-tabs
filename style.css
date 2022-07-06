@@ -1,0 +1,208 @@
+html,
+body {
+	padding: 0px;
+	margin: 0px;
+	background: #fff;
+	font-family: 'Karla', sans-serif;
+	color: #fff;
+}
+
+.browser {
+	max-width: 500px;
+	margin: 40px auto;
+	background: #fff;
+	color: #222;
+	border-radius: 3px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+	background: #ddd;
+}
+
+.browser .tabs {
+	display: flex;
+	padding: 0.5em 1em 0 1em;
+}
+
+.browser .tabs .tab {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	border-radius: 6px 6px 0 0;
+	padding: 0 1em;
+	font-size: 13px;
+}
+
+.browser .tabs .tab .close {
+	font-size: 16px;
+	position: absolute;
+	right: 0.75em;
+	top: 0.75em;
+	transform: rotateZ(45deg);
+	width: 1em;
+	height: 1em;
+	line-height: 0.9em;
+	text-align: center;
+	border-radius: 100%;
+}
+
+.browser .tabs .tab .close:hover {
+	background: rgba(255, 50, 50, 0.75);
+	color: #fff;
+}
+
+.browser .tabs .tab:hover {
+	background: #e6e6e6;
+	cursor: pointer;
+}
+
+.browser .tabs .tab:after, .browser .tabs .tab:before {
+	content: '';
+	position: absolute;
+	bottom: -0.1em;
+	width: 0.5em;
+	height: 0.5em;
+	opacity: 0;
+}
+
+.browser .tabs .tab:after {
+	left: 0;
+	transform: translateX(-90%);
+	background: radial-gradient(circle at top left, transparent 66%, #f0f0f0 0);
+}
+
+.browser .tabs .tab:before {
+	right: 0;
+	transform: translateX(90%);
+	background: radial-gradient(circle at top right, transparent 66%, #f0f0f0 0);
+}
+
+.browser .toolbar {
+	padding: 0.5em 0.5em;
+	background: #f0f0f0;
+	display: flex;
+}
+
+.browser .toolbar .controls {
+	box-sizing: border-box;
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.5em 0 0;
+	text-align: center;
+}
+
+.browser .toolbar .controls i {
+	color: #444;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.browser .toolbar .url {
+	height: 30px;
+	background: #fff;
+	border-radius: 6px;
+	border: none;
+	flex: 1;
+	padding: 0 0.5em;
+	box-sizing: border-box;
+}
+
+.browser .toolbar .url .text {
+	display: none;
+	line-height: 30px;
+	font-size: 12px;
+}
+
+.browser .display {
+	height: 300px;
+	width: 100%;
+	position: relative;
+	border-radius: 0 0 3px 3px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.browser .display iframe {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: scale(0.5);
+	transform-origin: top left;
+	width: 200%;
+	height: 200%;
+	background: red;
+	border: none;
+	overflow: hidden;
+}
+
+[name='tabs'] {
+	display: none;
+}
+
+[name='tabs']:nth-of-type(1):checked ~ .browser .tabs .tab:nth-of-type(1) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(1):checked ~ .browser .tabs .tab:nth-of-type(1):after, [name='tabs']:nth-of-type(1):checked ~ .browser .tabs .tab:nth-of-type(1):before {
+	opacity: 1;
+}
+
+[name='tabs']:nth-of-type(1):checked ~ .browser .url .text:nth-of-type(1) {
+	display: block;
+}
+
+[name='tabs']:nth-of-type(1):checked ~ .browser .display iframe:nth-of-type(1) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(1):checked ~ .browser .display iframe:nth-of-type(1):after, [name='tabs']:nth-of-type(1):checked ~ .browser .display iframe:nth-of-type(1):before {
+	opacity: 1;
+}
+
+[name='tabs']:nth-of-type(2):checked ~ .browser .tabs .tab:nth-of-type(2) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(2):checked ~ .browser .tabs .tab:nth-of-type(2):after, [name='tabs']:nth-of-type(2):checked ~ .browser .tabs .tab:nth-of-type(2):before {
+	opacity: 1;
+}
+
+[name='tabs']:nth-of-type(2):checked ~ .browser .url .text:nth-of-type(2) {
+	display: block;
+}
+
+[name='tabs']:nth-of-type(2):checked ~ .browser .display iframe:nth-of-type(2) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(2):checked ~ .browser .display iframe:nth-of-type(2):after, [name='tabs']:nth-of-type(2):checked ~ .browser .display iframe:nth-of-type(2):before {
+	opacity: 1;
+}
+
+[name='tabs']:nth-of-type(3):checked ~ .browser .tabs .tab:nth-of-type(3) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(3):checked ~ .browser .tabs .tab:nth-of-type(3):after, [name='tabs']:nth-of-type(3):checked ~ .browser .tabs .tab:nth-of-type(3):before {
+	opacity: 1;
+}
+
+[name='tabs']:nth-of-type(3):checked ~ .browser .url .text:nth-of-type(3) {
+	display: block;
+}
+
+[name='tabs']:nth-of-type(3):checked ~ .browser .display iframe:nth-of-type(3) {
+	z-index: 10;
+	background: #f0f0f0;
+}
+
+[name='tabs']:nth-of-type(3):checked ~ .browser .display iframe:nth-of-type(3):after, [name='tabs']:nth-of-type(3):checked ~ .browser .display iframe:nth-of-type(3):before {
+	opacity: 1;
+}

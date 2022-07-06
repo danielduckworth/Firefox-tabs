@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Firefox round</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Original source: https://codepen.io/sean_codes/pen/MqVbPX -->
+</head>
+
+<body>
+<input type="radio" name="tabs" id="tab1"/>
+<input type="radio" name="tabs" id="tab2"/>
+<input type="radio" name="tabs" id="tab3" checked="checked"/>
+<div class="browser">
+  <div class="tabs">
+    <label class="tab" for="tab1"> 
+      <div class="text"><i class="fa fa-github-alt"></i>&nbsp;&nbsp;Blog </div>
+      <div class="close">+</div>
+    </label>
+    <label class="tab" for="tab2"> 
+      <div class="text"><i class="fa fa-codepen"></i>&nbsp;&nbsp;Logan's Pizza </div>
+      <div class="close">+</div>
+    </label>
+    <label class="tab" for="tab3"> 
+      <div class="text"><i class="fa fa-user-circle-o"></i>&nbsp;&nbsp;Github </div>
+      <div class="close">+</div>
+    </label>
+  </div>
+  <div class="toolbar">
+    <div class="controls"><i class="fa fa-arrow-left"></i><i class="fa fa-arrow-right"></i><i class="fa fa-undo"></i></div>
+    <div class="url">
+      <div class="text">https://danielduckworth.github.io/</div>
+      <div class="text">https://danielduckworth.github.io/LogansPizzeria/LogansPizzeria.html</div>
+      <div class="text">https://pages.github.com/</div>
+    </div>
+  </div>
+  <div class="display">
+    <iframe src="https://danielduckworth.github.io/"></iframe>
+    <iframe src="https://danielduckworth.github.io/LogansPizzeria/LogansPizzeria.html"></iframe>
+    <iframe src="https://pages.github.com/"></iframe>
+  </div>
+</div>
+
+</body>
+
+</html>
